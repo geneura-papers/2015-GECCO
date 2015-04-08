@@ -44,10 +44,27 @@ P. Garc\'ia-S\'anchez\\
 %abstract - JJ
 % Paloma - esto es básicamente porque el abstract está cogido del resumen de lo del doctorado, para poder empezar por alguna cosa. Lo reescribo.
 
-Inside a ``Bring Your Own Device'' environment, the employees can freely use their devices. This allows them mix their personal and work life, but at the same time, if the users are not aware of a risky situation, or that situation is not covered by a security policy or rule, this environment can become very insecure. % <- problem
-The aim of this paper is defining a novel system architecture able to self-adapt itself, in the sense that it will learn from the past non secure situations, and therefore will be able to determine whether a new situation is risky or not. % <- solution
-This system proposes the use of a variety of techniques, from Data Mining analysis of big amounts of recorded data, to Evolutionary Algorithms for refining a set of existing policies, maybe creating new ones. % <- solution, details
-A preliminary study about the refinement of lists of permitted or non permitted URL connections helps to demonstrate that, by performing a good preprocessing of the data, useful conclusions can be extracted from new - unknown - situations. Therefore, it is possible to successfully extend a set of rules for covering new, and ponentially dangerous, situations. % <- why is possible
+Inside a ``Bring Your Own Device'' environment, the employees can
+freely use their devices. This allows them mix their personal and work
+life, but at the same time, if the users are not aware of a risky
+situation, or that situation is not covered by a company security policy or
+rule, this environment can become very insecure. % <- problem 
+The aim of this paper %quizás decir que es un proyecto de tesis? - JJ
+ is defining a novel system architecture able to self-adapt itself, in
+ the sense that it will learn from the past non secure situations, and
+ therefore will be able to determine whether a new situation is risky
+ or not. % <- solution 
+This system proposes the use of a variety of techniques, from Data
+Mining of big amounts of recorded data to Evolutionary Algorithms for
+refining a set of existing policies, maybe creating new ones. % <-
+                                % solution, details 
+A preliminary method that automatically extract rules to avoid or deny URL connections helps to demonstrate that, by performing a
+good preprocessing of the data, useful conclusions can be extracted
+from new - unknown - situations. Therefore, it is possible to
+successfully extend a set of rules, usually laid out by the company,
+for covering new, and potentially 
+dangerous, situations. % <- why is possible 
+%Much better - JJ
 \end{abstract}
 
 \category{H.4}{Information Systems Applications}{Miscellaneous}
@@ -144,8 +161,8 @@ Section \ref{sec:conclusions}.
 % Finally, my method will improve over those in this and that - JJ
 % Paloma - para esto, en cada caso se explican las ventajas/inconvenientes (resumidas, eso sí, son 4 páginas de artículo), y en qué extiende la situación el sistema que proponemos.
 Many tools for companies, as well as for devices, which have adopted the BYOD have been released in the past four years. This way, and
-more focused on the enterprise, tools by IBM \cite{IBM_tool} or Sophos
-\cite{Sophos_tool} offer the CSO ways to control the devices which
+more focused on the enterprise, tools such as IBM's Hosted Mobile
+Device Security Management or Sophos Mobile Control offer the CSO ways to control the devices which
 enter in the system, requiring users to employ strong passwords, for instance,
 % enroll no me gusta
 %Paloma -cambiado
@@ -180,7 +197,20 @@ fact, is against the BYOD philosophy), or to make employees buy them,
 so they cannot use the device they already have. %Paloma - añado esta frase por si no queda clara la comparativa
 On the contrary, the system proposed in this work is designed as device-independent.
 
-Finally, and though to be an extension of Android devices, two main tools can be found in the market. One tool developed by Samsung \cite{Samsung_tool}, for Samsung devices, and another one developed by Google itself, called Android Work \cite{AndroidWork_site}. Both of them have most of the same advantages as the blackphone, with the addition of an extension for CSOs. This means that Samsung, as well as Google, provide security tools both at device and server side. More precisely, Android work follows the way of working that Blackberry phones started with Blackberry balance \cite{Blackberry_tool}, which stands up for having \textit{work} applications and \textit{personal} applpications. This is called a ``dual-persona'' smartphone \cite{AndroidWork_review}. However, with regard to CSPs, neither of these tools specify ``self-adaptation' ' as a feature. They offer policy management, but still the do not analyse the system information for security rules evolution purposes.
+Finally, and though to be an extension of Android devices, two main
+tools can be found in the market: Samsung KNOX for Samsung devices,
+and Android Work by Google. %Quito esta cita. Cuando lo
+                                %convertas en un paper, deberías citar
+                                %no el proyecto en sí, sino un trabajo
+                                %que lo cite o compare o algo - JJ
+ Both have most of the same advantages as the blackphone, with the
+addition of an extension for CSOs. This means that Samsung, as well as
+Google, provide security tools both at device and server side. More
+precisely, Android work follows the way of working that Blackberry
+phones started with Blackberry Balance, %Estoy quitando citas a
+                                %herramientas (que no trabajos) para
+                                %liberar espacio. 
+  which stands up for having \textit{work} applications and \textit{personal} applpications. This is called a ``dual-persona'' smartphone \cite{AndroidWork_review}. However, with regard to CSPs, neither of these tools specify ``self-adaptation' ' as a feature. They offer policy management, but still the do not analyse the system information for security rules evolution purposes.
 
 With respect to the application of Data Mining to extract information from big amounts of data, this has been done since the nineties \cite{agrawal1995mining, ester1996density}. More specifically, DM has been widely used for security purposes, as it can be applied in computer forensics. O. de Vel studied the application of DM techniques to identify authors of malicious e-mails in \cite{DeVel2001}, and for performing ``offender profiling'' in relation to computer security attacks in \cite{abraham2002investigative}. Yet, the system this paper proposed is focused in doing this kind of analysis but then to look for similarities with the new incoming events, so that a decision can be made in case they are dangerous. Classification methods are also applied in the security field. For instance, Blanzieri and Bryl \cite{blanzieri2008} present a review on a variety of spam filtering methods, and compare them, reaching the conclusion of that they are successful in general, but yet insufficient. This is why implementing a self-adaptive system such as the one this paper proposes can be good for other security applications and not only spam classification.
 
@@ -253,6 +283,8 @@ As future work, the system will be implemented and tested in a real system, of a
 \section{Acknowledgements}
 
 \bibliographystyle{plain}
+% En general, podías reducir la bibliografía y concentrarla sobre todo
+% en el estado del arte - JJ
 \bibliography{sc_sec}
 
 \end{document}
