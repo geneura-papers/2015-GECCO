@@ -72,7 +72,7 @@ of a \textit{Bring Your Own Device} (BYOD) scenario in which people
 use their own devices at work. Despite of all the advantages that this
 environment might have, it is clear that this kind of situation
 creates new security challenges for the Chief Security Officer (CSO)
-of a company \cite{Opp_Security11}. This is because they want a fast response to any user action that might cause harm to the company, but without monitoring the users in a way that is against privacy. % because... the environment is
+of a company \cite{Opp_Security11}. This is because they want a fast response to any user action that might cause harm (in terms of money loss because of a security incident) to the company, but without monitoring the users in a way that is against privacy. % because... the environment is
                                 % not totally controlled, or
                                 % controlled all the time, by the IT
                                 % department of the company,
@@ -215,13 +215,13 @@ In order to understand the flow of information, it must be noted that the \texti
 This component wil be in charge of taking the desired `raw' data from the database, and processing it to remove errors or non-valid values, in order to obtain a dataset to be used in the rule treatment process. For instance, duplicated data or unknown values are considered as data that should be removed. Considered data corresponds to events (and their related information/context) produced by users' interactions with the system.
 Then, the preprocessing component will be devoted to `prepare' this data for the application of further techniques such as pattern mining \cite{han2007frequent}. Patter mining allows the identification of non-frequent or anomalous patterns, since these are suspicious, and thus, could be of interest to be checked by the Chief Security Officer.
 
-The next subcomponent performs tasks like feature selection \cite{guyon2003introduction}, which consists of choosing the most important data features/variables in order to reduce the dataset weight. Also, new features can be created by extracting meta-information from the existing ones. These two steps are mainly done for improving the performance of the classification stage. Then the subcomponent uses classification algorithms \cite{witten2005data}, i.e., it trains models (classifiers) able to associate every pattern in the dataset to a class. This way, the built classifier can assign a class to further incoming patterns.  In this case, the class will be the ``decision'' taken, which means that if the incoming user action is too similar to past dangerous patterns, it will be rejected ot denied.
+The next subcomponent performs tasks like feature selection \cite{guyon2003introduction}, which consists of choosing the most important data features/variables in order to reduce the dataset weight. Also, new features can be created by extracting meta-information from the existing ones. These two steps are mainly done for improving the performance of the classification stage. Then the subcomponent uses classification algorithms \cite{witten2005data}, i.e., it trains models (classifiers) able to associate every pattern in the dataset to a class. This way, the built classifier can assign a class to further incoming patterns.  In this case, the class will be the ``decision'' taken, which means that if the incoming user action is too similar to past dangerous patterns, it will be rejected or denied.
 
 \subsection{Rule treatment}
 \label{subsec:ruletreatment}
 
 This component will be focused in creating new rules and will also work with the existing CSPs.
-It will globally perform three different tasks over them. First, it will take the set of classification rules from the previous component, and will merge or compare them with the existing ones, suggesting a first set of new (unrefined) rules. Then, it will analyse the existing rules in order to remove, from the created set in the first step, those which might be redundant. This is done for maintaining correctness and coherence in the system. Finally, taking advantage of the decision tree structure nature of the rules, the system will consider using Genetic Programming \cite{koza1992genetic}, as the kind of EA used for optimising tree-based structures. The final set of rules will be presented to the CSO of the company, then accept or reject them. This acceptance or rejection of rule process is itself a `feedback' from wich the system can learn.
+It will globally perform three different tasks over them. First, it will take the set of classification rules from the previous component, and will merge or compare them with the existing ones, suggesting a first set of new (unrefined) rules. Then, it will analyse the existing rules in order to remove, from the created set in the first step, those which might be redundant. This is done for maintaining correctness and coherence in the system. Finally, taking advantage of the decision tree structure nature of the rules, the system will consider using Genetic Programming \cite{koza1992genetic}, as the kind of EA used for optimising tree-based structures. Furthermore, the system can determine that to specialise or generalise a certain rule is more efficient, and would cover more incidents. The final set of rules will be presented to the CSO of the company, then accept or reject them. This acceptance or rejection of rule process is itself a `feedback' from wich the system can learn.
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PRELIMINARY RESULTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -229,13 +229,23 @@ It will globally perform three different tasks over them. First, it will take th
 \section{Preliminary Results}
 \label{sec:results}
 
-As mentioned, the decision of implementing this system is preceded by the result obtained in \cite{mora14:urls}. 
+The decision of implementing this system is preceded by the results obtained in \cite{mora14:urls}. In that work, the type of events that the authors worked with were related to URL requests, that is, users making URL requests to the company proxy server. Then, instead of evolving Corporate Security Policies by themseves, the authors demonstrate that is possible to extend the preformance of what are called as black/white lists (non permitted/permitted URLs). This extension, however, is not aimed for including new URL strings, but to obtain a set of rules wich classify a certain URL request by other parameters such as the type of content of the webpage, or the size of the content.
+
+Then, in this work a dataset of 100000 patterns about employees' URL sessions information is analysed. Cconsidering a set of URL access permissions (initial black/white lists), they compose a labelled dataset over which they test several classification methods, applying differents preprocessing processes over the data each time. The results show that classification accuracies are between 95\% and 97\%, but more importantly, that the rules obtained from the output of the trained classifiers are useful for classifying future URL requests, even if the specific URL string is not included in a black or a white list.
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONCLUSIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\section{Conclusions}
+\section{Conclusions and future work}
 \label{sec:conclusions}
+
+This paper presents a proposed system architecture for evolving a set of security policies and rules, either creating new rules or refining the existing ones, for a company to be able to better secure its assets when adapting to a \textit{Bring Your Own Device} environment. This kind of environment can be dangerous because the users use their own devices for work, either inside or outside the workplace, and they are not always aware of being involved risky situations. A risky situation is any situation in which the low level of security migh cause a security incident, which itself is translated in money loss for the company.
+
+Then, as the Corporate Security Policies of a company cannot cover situations that never happened before, the system proposed in this work is able to extract knowledge from past situations, either dangerous or not, and can optimise the set of CSPs by creating new rules, refine them, or generalise them.
+
+Also, previous results obtained over real data of a particular type of event, which is a user making a URL request, support the idea of developing a system like the one proposed.
+
+As future work, the system will be implemented and tested in a real system, of a real company, as part of the MUSES European project prototype trials \cite{MUSES_SAC_14}.
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ACKNOWLEDGEMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
