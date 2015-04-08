@@ -79,7 +79,9 @@ Next section describes the methodology which the system proposed in this work wi
 \section{Methodology}
 \label{sec:methodology}
 
-Figure \ref{fig:krs} shows an overview of the architecture components of the proposed system.
+The proposed system is intended to be placed inside the server of the company which wants to add a rule-refinement feature to its security system. Furthermore, this self-adaptive system can be seen as a feature extension of the tools described in the previous section. Figure \ref{fig:krs} shows an overview of the architecture components of the proposed system.
+
+In order to understand the flow of information, it must be noted that the \textit{database} represents only the part inside the company server where the needed data is stored. This also contributes to preserve privacy, for the system would only have rights to access some piece of information. The following subsections describe the two main components of this system: the \textit{data mining analyser}, and the \textit{rule treatment} component, which will use Evolutionary Algorithms for creating and evolving security rules.
 
 \begin{figure*}
   \begin{center}
@@ -89,11 +91,27 @@ Figure \ref{fig:krs} shows an overview of the architecture components of the pro
   \end{center}
 \end{figure*}
 
+\subsection{Data mining analyser}
+\label{subsec:datamining}
+
+This component wil be in charge of taking the desired `raw' data from the database, and processing it to remove errors or non-valid values, in order to obtain a dataset to be used in the rule treatment process. For instance, duplicated data or unknown values are considered as data that should be removed. Considered data corresponds to events (and their related information/context) produced by users' interactions with the system.
+Then, the preprocessing component will be devoted to `prepare' this data for the application of further techniques such as pattern mining \cite{han2007frequent}. Patter mining allows the identification of non-frequent or anomalous patterns, since these are suspicious, and thus, could be of interest to be checked by the Chief Security Officer.
+
+The next subcomponent performs tasks like feature selection \cite{guyon2003introduction}, which consists of choosing the most important data features/variables in order to reduce the dataset weight. Also, new features can be created by extracting meta-information from the existing ones. These two steps are mainly done for improving the performance of the classification stage. Then the subcomponent uses classification algorithms \cite{witten2005data}, i.e., it trains models (classifiers) able to associate every pattern in the dataset to a class. This way, the built classifier can assign a class to further incoming patterns.  In this case, the class will be the ``decision'' taken, which means that if the incoming user action is too similar to past dangerous patterns, it will be rejected ot denied.
+
+\subsection{Rule treatment}
+\label{subsec:ruletreatment}
+
+This component will be focused in creating new rules and will also work with the existing CSPs.
+It will globally perform three different tasks over them. First, it will take the set of classification rules from the previous component, and will merge or compare them with the existing ones, suggesting a first set of new (unrefined) rules. Then, it will analyse the existing rules in order to remove, from the created set in the first step, those which might be redundant. This is done for maintaining correctness and coherence in the system. Finally, taking advantage of the decision tree structure nature of the rules, the system will consider using Genetic Programming \cite{koza1992genetic}, as the kind of EA used for optimising tree-based structures. The final set of rules will be presented to the CSO of the company, then accept or reject them. This acceptance or rejection of rule process is itself a `feedback' from wich the system can learn.
+
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PRELIMINARY RESULTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \section{Preliminary Results}
 \label{sec:results}
+
+As mentioned, the decision of implementing this system is preceded by the result obtained in \cite{mora14:urls}. 
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONCLUSIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
