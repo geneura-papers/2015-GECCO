@@ -259,9 +259,28 @@ It will globally perform three different tasks over them. First, it will take th
 \section{Preliminary Results}
 \label{sec:results}
 
-The decision of implementing this system is preceded by the results obtained in \cite{mora14:urls}. In that work, the type of events that the authors worked with were related to URL requests, that is, users making URL requests to the company proxy server. Then, instead of evolving Corporate Security Policies by themseves, the authors demonstrate that is possible to extend the preformance of what are called as black/white lists (non permitted/permitted URLs). This extension, however, is not aimed for including new URL strings, but to obtain a set of rules wich classify a certain URL request by other parameters such as the type of content of the webpage, or the size of the content.
+The decision of implementing this system is preceded by the results
+obtained in \cite{mora14:urls}. In that work, the type of events that
+the authors worked with were related to URL requests, that is, users
+making URL requests to the company proxy server. Then, instead of
+evolving Corporate Security Policies by themseves, the authors
+demonstrate that is possible to extend the preformance of what are
+called as black/white lists (non permitted/permitted URLs). This
+extension, however, is not aimed for including new URL strings, but to
+obtain a set of rules wich classify a certain URL request by other
+parameters such as the type of content of the webpage, or the size of
+the content. 
 
-Then, in this work a dataset of 100000 patterns about employees' URL sessions information is analysed. Cconsidering a set of URL access permissions (initial black/white lists), they compose a labelled dataset over which they test several classification methods, applying differents preprocessing processes over the data each time. The results show that classification accuracies are between 95\% and 97\%, but more importantly, that the rules obtained from the output of the trained classifiers are useful for classifying future URL requests, even if the specific URL string is not included in a black or a white list.
+Then, in this work a dataset of 100000 patterns about employees' URL
+sessions information is analysed. Cconsidering a set of URL access
+permissions (initial black/white lists), they compose a labelled
+dataset over which they test several classification methods, applying
+differents preprocessing processes over the data each time. The
+results show that classification accuracies range from 95\% to 97\%,
+but more importantly, that the rules obtained from the output of the
+trained classifiers are useful for classifying future URL requests,
+even if the specific URL string is not included in a black or a white
+list. 
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONCLUSIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
