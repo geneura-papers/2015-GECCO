@@ -30,16 +30,12 @@ P. de las Cuevas\\
 %do you think the techniques and methodology you're applying will
 %solve it? Those are the three questions that you have to answer in an
 %abstract - JJ
-Inside a ``Bring Your Own Device'' environment, the employees can freely use their devices. This allows them mix their personal and work life, but at the same time, this environment is very insecure. The aim of this paper is defining a methodology in order to create a self-adaptative system in which the security rules/policies evolve with the environment. The system should be able to cope with huge amounts of data, applying Data Mining techniques.
-Genetic Programming, and Evolutionary Algorithms should also be
-applied in this system, so that the set of security rules can be
-optimised and therefore cover as much insecure situations as
-possible. Also, in order to better classify the unknown situations, a
-novel classifier is going to be implemented. 
-The system should be also multiplatform, as there are many different
-languages used for security management. %That's an implementation
-                                %issue mainly. No use in the abstract
-                                %- JJ 
+% Paloma - esto es básicamente porque el abstract está cogido del resumen de lo del doctorado, para poder empezar por alguna cosa. Lo reescribo.
+
+Inside a ``Bring Your Own Device'' environment, the employees can freely use their devices. This allows them mix their personal and work life, but at the same time, if the users are not aware of a risky situation, or that situation is not covered by a security policy or rule, this environment can become very insecure. % <- problem
+The aim of this paper is defining a novel system architecture able to self-adapt itself, in the sense that it will learn from the past non secure situations, and therefore will be able to determine whether a new situation is risky or not. % <- solution
+This system proposes the use of a variety of techniques, from Data Mining analysis of big amounts of recorded data, to Evolutionary Algorithms for refining a set of existing policies, maybe creating new ones. % <- solution, details
+A preliminary study about the refinement of lists of permitted or non permitted URL connections helps to demonstrate that, by performing a good preprocessing of the data, useful conclusions can be extracted from new - unknown - situations. Therefore, it is possible to successfully extend a set of rules for covering new, and ponentially dangerous, situations. % <- why is possible
 \end{abstract}
 
 \category{H.4}{Information Systems Applications}{Miscellaneous}
@@ -64,35 +60,38 @@ of a \textit{Bring Your Own Device} (BYOD) scenario in which people
 use their own devices at work. Despite of all the advantages that this
 environment might have, it is clear that this kind of situation
 creates new security challenges for the Chief Security Officer (CSO)
-of a company \cite{Opp_Security11}. % because... the environment is
+of a company \cite{Opp_Security11}. This is because they want a fast response to any user action that might cause harm to the company, but without monitoring the users in a way that is against privacy. % because... the environment is
                                 % not totally controlled, or
                                 % controlled all the time, by the IT
                                 % department of the company,
                                 % because... - JJ
-
-What companies normally do for establishing a list of security
-measures to cope with all the security incidents which might happen,
-is to build what is called a set of \textit{Corporate Security
+%Paloma - añadido
+The task of the CSO and the security department of a company, is establishing a list of security
+measures to cope with all the security incidents which might happen in every environment,
+so they build what is called a set of \textit{Corporate Security
   Policies} (CSPs). These are a set of security rules aiming at
 % This happens only in BYOD environments? Also in normal
 % company-issued phones or computers? How does that relate to BYOD?
 % It might be obvious to you, but not to the average EC conference
 % delegate - JJ
+%Paloma - extendido
 protecting company assets by defining permissions for every different
 behaviour that could lead to security incidents
-\cite{kaeo2003designing}. When such companies embrace a constantly
+\cite{kaeo2003designing}. But when such companies embrace a constantly
 changing environment, and allow their employees to use their own
 devices, the risk of having security incidents grows, even if the
 employees do not have intention of attacking the company
-\cite{stanton2005analysis, breivik2002abstract}. 
+\cite{stanton2005analysis, breivik2002abstract}. Then, there is a need of constantly renew the CSPs, which it might be difficult if new threats appear without knowing it in advance (because they are not included in the security policies).
 
-This paper proposes the development of a system designed to be easily
+This paper proposes a system architecture, which should be easily
 % this paper? Your thesis? Are you covering that whole topic in this
 % paper? 
-integrable in company servers, and capable of evolving the rules
+% Paloma - es verdad que no es el desarrollo en sí, lo he cambiado a que lo que se propone es la arquitectura
+integrated in company servers, and capable of evolving the rules
 included in a CSP by learning from past user behaviours which caused
 security incidents. In order to achieve this, different techniques
 % all past behaviours? Those that can be detected? - JJ
+% Paloma - "those which caused security incidents", está especificado, ¿crees que hace falta reescribir?
 have to be applied. First, we assume that a company stores the
 security incidents that have been produced, along with the context in
 which they were produced. Context was defined by Abowd et
@@ -131,41 +130,43 @@ Section \ref{sec:conclusions}.
 % 2. What kind of things they don't do?
 % 3. How is success or efficiency of these tools measured?
 % Finally, my method will improve over those in this and that - JJ
-Many companies are aware of the BYOD tendency % frase vacía. ¿Cuantas
-                                % compañías lo usan? ¿hay algún dato?
-                                % ¿Qué mercado potencial hay? ¿Tu
-                                % método se puede usar sólo en ese
-                                % entorno? - JJ
-and so they are
-releasing tools for companies, as well as for devices. This way, and
+% Paloma - para esto, en cada caso se explican las ventajas/inconvenientes (resumidas, eso sí, son 4 páginas de artículo), y en qué extiende la situación el sistema que proponemos.
+Many tools for companies, as well as for devices, which have adopted the BYOD have been released in the past four years. This way, and
 more focused on the enterprise, tools by IBM \cite{IBM_tool} or Sophos
 \cite{Sophos_tool} offer the CSO ways to control the devices which
-enroll in the system, requiring users to employ strong passwords, for instance,
+enter in the system, requiring users to employ strong passwords, for instance,
 % enroll no me gusta
-and also to protect the employees data by means of encryption and data
-protection % at what level? - JJ
-. Other tools, %for doing what? - JJ
+%Paloma -cambiado
+and also to protect the employees data by means of data encryption and data
+protection by having strong and secure passwords % at what level? - JJ
+%Paloma - extendido
+. Other tools for managing a BYOD situation, %for doing what? - JJ
+% Paloma - extendido
  such as the one developed by Good's
 Technology \cite{Good_tool}, adds to their features guidelines for the
 CSOs to develop good CSPs. However, not one of the reviewed tools has
 the ability of inferring new rules or refining the existing ones. 
 
-On the device side, the most powerful solution % for doing what? BYOD?
+On the device side, the most powerful solution to protect them in a BYOD situation
+ % for doing what? BYOD?
                                 % - JJ
+                                % Paloma - extendido esto también
 seems to be to directly
 use a phone which has been developed with data security in mind such as the BlackPhone
 \cite{Blackphone_site}. It has its own Android-based operating system,
 called \textit{PrivatOS}, which includes a privacy-focused application
 store (called \textit{Silent Store}) that takes care of the problem of
-applications which ask for certain permissions that can lead to data
-loss \cite{gangula2013survey}. This BlackPhone also allows a remote
+applications which ask for certain permissions that can lead, for instance, to personal data
+leakage \cite{gangula2013survey}. This BlackPhone also allows a remote
 % The problem you're trying to prevent is data loss? How big is that
 % problem? - JJ
+% Paloma - no sólamente. He añadido el "for instance" para que se vea que no es solo eso.
 wiping of the data if the device is lost or stolen. The main
 disadvantage of this solution is either the enterprise having to make
 an investment and buy these smartphones to the employees (which, in
 fact, is against the BYOD philosophy), or to make employees buy them,
-so they cannot use the device they already have.  
+so they cannot use the device they already have. %Paloma - añado esta frase por si no queda clara la comparativa
+On the contrary, the system proposed in this work is designed as device-independent.
 
 Finally, and though to be an extension of Android devices, two main tools can be found in the market. One tool developed by Samsung \cite{Samsung_tool}, for Samsung devices, and another one developed by Google itself, called Android Work \cite{AndroidWork_site}. Both of them have most of the same advantages as the blackphone, with the addition of an extension for CSOs. This means that Samsung, as well as Google, provide security tools both at device and server side. More precisely, Android work follows the way of working that Blackberry phones started with Blackberry balance \cite{Blackberry_tool}, which stands up for having \textit{work} applications and \textit{personal} applpications. This is called a ``dual-persona'' smartphone \cite{AndroidWork_review}. However, with regard to CSPs, neither of these tools specify ``self-adaptation' ' as a feature. They offer policy management, but still the do not analyse the system information for security rules evolution purposes.
 
