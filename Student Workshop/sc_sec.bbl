@@ -1,0 +1,153 @@
+\begin{thebibliography}{10}
+
+\bibitem{abowd1999towards}
+Gregory~D Abowd, Anind~K Dey, Peter~J Brown, Nigel Davies, Mark Smith, and Pete
+  Steggles.
+\newblock Towards a better understanding of context and context-awareness.
+\newblock In {\em Handheld and ubiquitous computing}, pages 304--307. Springer,
+  1999.
+
+\bibitem{abraham2002investigative}
+Tamas Abraham and Olivier de~Vel.
+\newblock Investigative profiling with computer forensic log data and
+  association rules.
+\newblock In {\em Data Mining, 2002. ICDM 2003. Proceedings. 2002 IEEE
+  International Conference on}, pages 11--18. IEEE, 2002.
+
+\bibitem{agrawal1995mining}
+Rakesh Agrawal and Ramakrishnan Srikant.
+\newblock Mining sequential patterns.
+\newblock In {\em Data Engineering, 1995. Proceedings of the Eleventh
+  International Conference on}, pages 3--14. IEEE, 1995.
+
+\bibitem{AndroidWork_review}
+Ron Amadeo.
+\newblock {A review of Android for Work: Dual-persona support comes to
+  Android}, 2015.
+
+\bibitem{blanzieri2008}
+Enrico Blanzieri and Anton Bryl.
+\newblock A survey of learning-based techniques of email spam filtering.
+\newblock {\em Artificial Intelligence Review}, 29(1):63--92, 2008.
+
+\bibitem{breivik2002abstract}
+GF~Breivik.
+\newblock Abstract misuse patterns - a new approach to security requirements.
+\newblock {\em Master Thesis. Dept of Information Science. Bergen, University
+  of Bergen, N-5020 NORWAY}, 2002.
+
+\bibitem{Blackphone_site}
+Silent Circle.
+\newblock Blackphone website, 2014.
+
+\bibitem{inferring_policies_socialnetworks_09}
+George Danezis.
+\newblock Inferring privacy policies for social networking services.
+\newblock In {\em Proceedings of the 2Nd ACM Workshop on Security and
+  Artificial Intelligence}, AISec '09, pages 5--10, New York, NY, USA, 2009.
+  ACM.
+
+\bibitem{DeVel2001}
+O.~de~Vel, A.~Anderson, M.~Corney, and G.~Mohay.
+\newblock Mining e-mail content for author identification forensics.
+\newblock {\em SIGMOD Record}, 30(4):55--64, 2001.
+
+\bibitem{ester1996density}
+Martin Ester, Hans-Peter Kriegel, J{\"o}rg Sander, and Xiaowei Xu.
+\newblock A density-based algorithm for discovering clusters in large spatial
+  databases with noise.
+\newblock In {\em KDD-96}, pages 226--231, 1996.
+
+\bibitem{gangula2013survey}
+A.~Gangula, S.~Ansari, and M.~Gondhalekar.
+\newblock Survey on mobile computing security.
+\newblock In {\em Modelling Symposium (EMS), 2013 European}, pages 536--542,
+  Nov 2013.
+
+\bibitem{guyon2003introduction}
+Isabelle Guyon and Andr{\'e} Elisseeff.
+\newblock An introduction to variable and feature selection.
+\newblock {\em The Journal of Machine Learning Research}, 3:1157--1182, 2003.
+
+\vfill\eject
+\bibitem{han2007frequent}
+Jiawei Han, Hong Cheng, Dong Xin, and Xifeng Yan.
+\newblock Frequent pattern mining: current status and future directions.
+\newblock {\em Data Mining and Knowledge Discovery}, 15(1):55--86, 2007.
+
+\bibitem{kaeo2003designing}
+Merike Kaeo.
+\newblock {\em Designing network security}.
+\newblock Cisco Press, 2003.
+
+\bibitem{user-controllable_learning_08}
+Patrick~Gage Kelley, Paul Hankes~Drielsma, Norman Sadeh, and Lorrie~Faith
+  Cranor.
+\newblock User-controllable learning of security and privacy policies.
+\newblock In {\em Proceedings of the 1st ACM Workshop on Workshop on AISec},
+  AISec '08, pages 11--18, New York, NY, USA, 2008. ACM.
+
+\bibitem{koza1992genetic}
+John~R Koza.
+\newblock {\em Genetic programming: on the programming of computers by means of
+  natural selection}, volume~1.
+\newblock MIT press, 1992.
+
+\bibitem{lim2008policy}
+Yow~Tzu Lim, Pau~Chen Cheng, John~Andrew Clark, and Pankaj Rohatgi.
+\newblock Policy evolution with genetic programming: A comparison of three
+  approaches.
+\newblock In {\em Evolutionary Computation, 2008. CEC 2008.(IEEE World Congress
+  on Computational Intelligence). IEEE Congress on}, pages 1792--1800. IEEE,
+  2008.
+
+\bibitem{lim2008mls}
+Yow~Tzu Lim, Pau~Chen Cheng, Pankaj Rohatgi, and John~Andrew Clark.
+\newblock {MLS} security policy evolution with {Genetic Programming}.
+\newblock In {\em Proceedings of the 10th annual conference on Genetic and
+  evolutionary computation}, pages 1571--1578. ACM, 2008.
+
+\bibitem{mora14:urls}
+A.M. Mora, P.~De~las Cuevas, and J.J. Merelo.
+\newblock Going a step beyond the black and white lists for url accesses in the
+  enterprise by means of categorical classifiers.
+\newblock In Agostinho Rosa, Juan~Juli{\'a}n Merelo, and Joaquim Filipe,
+  editors, {\em ECTA 2014 - Proceedings of the International Conference on
+  Evolutionary Computation Theory and Applications}, pages 125--134, 2014.
+
+\bibitem{MUSES_SAC_14}
+A.M. Mora, P.~De~las Cuevas, J.J Merelo, S.~Zamarripa, M.~Juan, A.I.
+  Esparcia-Alcázar, M.~Burvall, H.~Arfwedson, and Z.~Hodaie.
+\newblock {MUSES: A corporate user-centric system which applies computational
+  intelligence methods}.
+\newblock In Dongwan~Shin et~al., editor, {\em 29th Symposium On Applied
+  Computing}, pages 1719--1723, 2014.
+
+\bibitem{Opp_Security11}
+R.~Oppliger.
+\newblock Security and privacy in an online world.
+\newblock {\em IEEE Computer}, 44(9):21--22, September 2011.
+
+\bibitem{stanton2005analysis}
+Jeffrey~M Stanton, Kathryn~R Stam, Paul Mastrangelo, and Jeffrey Jolton.
+\newblock Analysis of end user security behaviors.
+\newblock {\em Computers \& Security}, 24(2):124--133, 2005.
+
+\bibitem{suarez2009automatic}
+Guillermo Suarez-Tangil, Esther Palomar, Jos{\'e}~Mar{\'\i}a de~Fuentes,
+  J~Blasco, and Arturo Ribagorda.
+\newblock Automatic rule generation based on genetic programming for event
+  correlation.
+\newblock In {\em Computational Intelligence in Security for Information
+  Systems}, pages 127--134. Springer, 2009.
+
+\bibitem{Good_tool}
+Good's Technology.
+\newblock Good's technology byod solution, 2012.
+
+\bibitem{witten2005data}
+Ian~H Witten and Eibe Frank.
+\newblock {\em Data Mining: Practical machine learning tools and techniques}.
+\newblock Morgan Kaufmann, 2005.
+
+\end{thebibliography}
